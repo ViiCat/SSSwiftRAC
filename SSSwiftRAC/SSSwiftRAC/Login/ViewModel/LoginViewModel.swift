@@ -7,10 +7,10 @@
 //
 
 import UIKit
+import Foundation
 import ReactiveSwift
 import ReactiveCocoa
 import Result
-import Foundation
 
 class LoginViewModel: NSObject {
     
