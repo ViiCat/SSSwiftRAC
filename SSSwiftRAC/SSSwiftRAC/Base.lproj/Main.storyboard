@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ne0-1i-70m">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="pFz-UC-MvT">
+            <objects>
+                <navigationController id="Ne0-1i-70m" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jq5-Jn-0Nc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="q9s-Hu-LmA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ulF-aC-pzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-841" y="-88"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="SSSwiftRAC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="LoginView" customModule="SSSwiftRAC" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sed-bW-uod">
+                                <rect key="frame" x="91.5" y="258" width="192" height="30"/>
+                                <state key="normal" title="Login"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input 11 character account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ORA-KH-Pvc">
+                                <rect key="frame" x="91.5" y="159" width="192" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input 6 character pwd" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q6D-gC-ZmA">
+                                <rect key="frame" x="91.5" y="208" width="192" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ORA-KH-Pvc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DcK-GP-ljz"/>
+                            <constraint firstItem="ORA-KH-Pvc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="DsT-gO-QLn"/>
+                            <constraint firstItem="Q6D-gC-ZmA" firstAttribute="width" secondItem="ORA-KH-Pvc" secondAttribute="width" id="RyA-5w-tzH"/>
+                            <constraint firstItem="Sed-bW-uod" firstAttribute="trailing" secondItem="Q6D-gC-ZmA" secondAttribute="trailing" id="TuY-HQ-m54"/>
+                            <constraint firstItem="Sed-bW-uod" firstAttribute="top" secondItem="Q6D-gC-ZmA" secondAttribute="bottom" constant="20" id="Vpg-dx-AYM"/>
+                            <constraint firstItem="Q6D-gC-ZmA" firstAttribute="top" secondItem="ORA-KH-Pvc" secondAttribute="bottom" constant="19" id="YMb-3E-FrD"/>
+                            <constraint firstItem="Q6D-gC-ZmA" firstAttribute="leading" secondItem="ORA-KH-Pvc" secondAttribute="leading" id="jIM-h6-Yg9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Sed-bW-uod" secondAttribute="trailing" symbolic="YES" id="mWn-9i-vLw"/>
+                            <constraint firstItem="Sed-bW-uod" firstAttribute="leading" secondItem="Q6D-gC-ZmA" secondAttribute="leading" id="seV-Fw-LRM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8z1-Bf-ffa"/>
+                    <connections>
+                        <outlet property="btnLogin" destination="Sed-bW-uod" id="vRN-fG-Iiw"/>
+                        <outlet property="txtAccount" destination="ORA-KH-Pvc" id="2rT-6K-Nib"/>
+                        <outlet property="txtPwd" destination="Q6D-gC-ZmA" id="1ee-Wx-JBr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-151" y="-89"/>
+        </scene>
+    </scenes>
+</document>

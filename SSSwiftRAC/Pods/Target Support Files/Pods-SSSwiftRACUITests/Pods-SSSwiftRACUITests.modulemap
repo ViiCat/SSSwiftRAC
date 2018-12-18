@@ -1,0 +1,6 @@
+framework module Pods_SSSwiftRACUITests {
+  umbrella header "Pods-SSSwiftRACUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
